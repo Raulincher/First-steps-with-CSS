@@ -1,0 +1,854 @@
+
+/*Empezamos poniendo todos mis articulos a z-index 1 para que así nuestro header nos pueda perseguir sin problemas haciendo scroll*/
+#article{
+    z-index: 1;
+}
+/*Cuando disminuyes la web hasta los 600 px se producen cambios en la misma. 
+Para que esto ocurra se han implementado media queries en los elementos importantes para quese modificaran acorde al tamañao.*/
+/*tambien hago uso de acciones como hover el cual es usado para añadir funcionalidades a la hora de poner el ratón encima. Lo he usado en todos los textos de la web para transformarlos en rojo 
+y para que las imagenes de los productos aparecieran con un sombreado. Tambien lo he hecho para que apareciera un pequeño menú encima del producto por el que pasas. */
+
+/*A lo largo del CSS voy alternando entre grid y flex para poder realizar de mejor forma el trabajo. En casos como el del mosaico de imagenes he decidido usar un grid 
+ya que me permitia ordenar las fotos de forma más comoda, pero en zonas como el header he preferido usar el flex ya que este permite poner espacios parejos entre contenedores, alinearlos de forma simple, etc.*/
+
+/*la fuente usada ha sido Karla en todos los lugares, y dependiendo la zoan se ha usado un tipo de grafia distinta como bold e italic*/
+
+/*------------------------------------------------------------------------------ZONA HEADER------------------------------------------------*/
+@media (max-width: 600px) {
+    .contenedor_menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items:flex-start;
+      height: 210px;
+      position: relative;
+    }
+    .logo_header{
+        margin-left: 10%;
+        height: 100%;
+    }
+    .movil{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 30%;
+        width: 100%;
+    }
+    .middle_buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap:10px;
+    }
+    .left_layout{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+
+    }
+    
+    .iconos_header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+.contenedor_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Karla';
+    position: sticky; 
+    top: 0;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 0;
+    z-index: 2;
+    width: 100%;
+    opacity: 85%;
+}
+.movil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+}
+.contenedor_menu:hover{
+    opacity: 100%;
+}
+
+.middle_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    width: 40%;
+    margin-right: 20%;
+    /*padding-right:400px;*/
+}
+.left_layout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    height: 75px;
+    width: 20%;
+}
+
+.iconos_header{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+}
+
+/*Aqui simulo que es un clicable para llevarte a otra zona de la pagina*/
+.home_text{
+    color: #000000;
+    text-decoration: none;
+}
+.home_text:hover{
+    color: #d2201c;
+    text-decoration:none; 
+    cursor:pointer;
+}
+.shop_text{
+    color: #000000;
+    text-decoration: none;
+}
+.shop_text:hover{
+    color: #d2201c;
+    text-decoration:none; 
+    cursor:pointer;
+}
+.blog_text{
+    color: #000000;
+    text-decoration: none;
+}
+.blog_text:hover{
+    color: #d2201c;
+    text-decoration:none; 
+    cursor:pointer;
+}
+.products_text{
+    color: #000000;
+    text-decoration: none;
+}
+.products_text:hover{
+    color: #d2201c;
+    text-decoration:none; 
+    cursor:pointer;
+}
+.about_text{
+    color: #000000;
+    text-decoration: none;
+}
+.about_text:hover{
+    color: #d2201c;
+    text-decoration:none; 
+    cursor:pointer;
+}
+.contact_text{
+    color: #000000;
+    text-decoration: none;
+}
+.contact_text:hover{
+    color: #d2201c;
+    text-decoration:none; 
+    cursor:pointer;
+}
+.our_store{
+    color: #000000;
+    text-decoration: none;
+}
+.our_store:hover{
+    color: #d2201c;
+    text-decoration:none; 
+    cursor:pointer;
+}
+.home_arrow:hover{
+    color: #d2201c;
+    cursor:pointer;
+}
+.shop_arrow:hover{
+    color: #d2201c;
+    cursor:pointer;
+}
+.products_arrow:hover{
+    color: #d2201c;
+    cursor:pointer;
+}
+.shopping_bag{
+    color: #000000;
+    text-decoration: none;
+}
+.shopping_bag:hover{
+    color: #d2201c;
+    cursor:pointer;
+}
+.search{
+    color: #000000;
+    text-decoration: none;
+
+
+}
+.search:hover{
+    color: #d2201c;
+    cursor:pointer;
+}
+.gear{
+    color: #000000;
+    text-decoration: none;
+}
+.gear:hover{
+    color: #d2201c;
+    cursor:pointer;
+}
+
+
+
+
+/*------------------------------------------------------------------------------ZONA IMAGENES MOSAICO------------------------------------------------*/
+
+@media(max-width: 600px) {
+    .contenedor_inicial {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "sale_men"
+        "sale"
+        "trending_sunglasses"
+        "sale_off"
+        "new_arrivals"
+        "sale_accesories"
+        "handbag_collection"
+        /*"sale_women"*/;
+    }
+
+    .texto_sale_men{
+
+        margin-left: 5%;
+    }
+}
+
+.contenedor_inicial{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "sale_men sale_men sale trending_sunglasses"
+      "sale_men sale_men sale sale_off"
+      "new_arrivals handbag_collection sale_women sale_women"
+      "sale_accesories handbag_collection sale_women sale_women";
+    
+    gap: 20px;
+
+}
+.sale_men{
+    grid-area: sale_men;
+    width: 100%;
+    height: 100%;
+}
+.sale{
+    grid-area: sale;
+    width: 100%;
+    height: 100%;
+}
+.trending_sunglasses{
+    grid-area: trending_sunglasses;
+    width: 100%;
+    height: 100%;
+}
+.sale_off{
+    grid-area: sale_off;
+    width: 100%;
+    height: 100%;
+}
+.new_arrivals{
+    grid-area: new_arrivals;
+    width: 100%;
+    height: 100%;
+}
+.sale_accesories{
+    grid-area: sale_accesories;
+    width: 100%;
+    height: 100%;
+}
+.handbag_collection{
+    grid-area: handbag_collection;
+    width: 100%;
+    height: 100%;
+}
+.sale_women{
+    grid-area: sale_women;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.texto_sale_men{
+    position: absolute;
+    font-family: 'Karla';
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 78%;
+    margin-left: 5%;
+}
+.texto_conjunto_offer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 60%;
+}
+.limited_edition{
+    display: flex;
+    background-color: #d2201c;
+    font-size: 15px;
+    color:#f6f6f6;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 40%;
+}
+.text_sale_offer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold; 
+    width: 80%;
+}
+.sport_sneaker{
+    font-weight: normal;
+    font-size: 80px;
+    margin-top: 10px;
+}
+.explore_now{
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 10%;
+}
+
+
+
+
+/*------------------------------------------------------------------------------ZONA TEXTOS INTERMEDIOS------------------------------------------------*/
+
+.textos_intermedios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Karla';
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+
+
+
+/*------------------------------------------------------------------------------ZONA PRODUCTOS------------------------------------------------*/
+
+@media (max-width: 600px) {
+    .contenedor_inicial {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "contenedor_billetera"
+        "contenedor_nike"
+        "contenedor_mochila"
+        "contenedor_gafas"
+        "contenedor_calcetin"
+        "scontenedor_decoraciones";
+    }
+}
+
+.contenedor_final{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "contenedor_billetera contenedor_nike contenedor_mochila contenedor_gafas contenedor_calcetin contenedor_decoraciones";
+  
+    font-family: 'Karla';
+    height: 600px;
+}
+.img_billetera{
+
+    height: 90%;
+    width: 90%;
+}
+.billetera{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 300px;
+}
+.contenedor_billetera{
+    grid-area: contenedor_billetera;
+    height: 420px;
+}
+.contenedor_billetera:hover{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.contenedor_billetera:hover .overlay{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    transform: rotate3d(1,0,0,0deg);
+    background-color: white;
+    opacity: 100%;
+
+}
+.img_nike{
+
+    height: 90%;
+    width: 90%;
+}
+.nike{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.contenedor_nike{
+    grid-area: contenedor_nike;
+    height: 420px;
+}
+.contenedor_nike:hover{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.contenedor_nike:hover .overlay{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    transform: rotate3d(1,0,0,0deg);
+    background-color: white;
+    opacity: 100%;
+
+}
+.img_mochila{
+
+    height: 90%;
+    width: 90%;
+}
+.mochila{
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.contenedor_mochila{
+    grid-area: contenedor_mochila;
+    height: 420px;
+}
+.contenedor_mochila:hover{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.contenedor_mochila:hover .overlay{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    transform: rotate3d(1,0,0,0deg);
+    background-color: white;
+    opacity: 100%;
+
+}
+.img_gafas{
+
+    height: 90%;
+    width: 90%;
+}
+.gafas{
+    grid-column: 4;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.contenedor_gafas{
+    grid-area: contenedor_gafas;
+    height: 420px;
+}
+.contenedor_gafas:hover{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.contenedor_gafas:hover .overlay{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    transform: rotate3d(1,0,0,0deg);
+    background-color: white;
+    opacity: 100%;
+
+}
+.img_calcetin{
+
+    height: 90%;
+    width: 90%;
+}
+.calcetin{
+    grid-column: 5;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+.contenedor_calcetin{
+    grid-area: contenedor_calcetin;
+    height: 520px;
+}
+.contenedor_calcetin:hover{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.contenedor_calcetin:hover .overlay_especial{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    transform: rotate3d(1,0,0,0deg);
+    background-color: white;
+    opacity: 100%;
+
+}
+.img_decoraciones{
+
+    height: 90%;
+    width: 90%;
+}
+.decoraciones{
+    grid-column: 6;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+.contenedor_decoraciones{
+    grid-area: contenedor_decoraciones;
+    height: 520px;
+}
+.contenedor_decoraciones:hover{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.contenedor_decoraciones:hover .overlay_especial{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    transform: rotate3d(1,0,0,0deg);
+    background-color: white;
+    opacity: 100%;
+
+}
+/*Como la zona del texto y el overlay de los productos es el mismo para todos he creado una unica clase de css que modifique a todos por igual asi ahorro linias de código*/
+.texto{
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+.estrellas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    color: #f4d88e;
+    margin-right: 15px;
+}
+.descripcion{
+    margin: 0;
+    padding: 0;
+
+}
+.descripcion:hover{
+
+    color: #d2201c;
+    text-decoration: underline;
+    cursor:pointer;
+
+}
+.texto_estrellas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.precios{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.p_normal{
+    text-decoration: line-through;
+    font-size: 12px;
+}
+.p_rebajado{
+    color: #d2201c;
+}
+.descuento{
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.overlay{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    margin-left:50px;
+    margin-top: 200px;
+    width: 200px;
+    height: 50px;
+    opacity: 100%;
+    transform: rotate3d(1,1,0,90deg);
+}
+.overlay_especial{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    margin-left:50px;
+    margin-top: 300px;
+    width: 200px;
+    height: 50px;
+    transform: rotate3d(1,0,0,90deg);
+    opacity: 100%;
+
+}
+.tiempo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    position: absolute;
+    background-color: white;
+    margin-left:25px;
+    margin-top: 200px;
+    width: 14%;
+    height: 50px;
+    opacity: 90%;
+}
+.numbers{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 15px;
+    gap: 55px;
+    padding:0;
+    height: 25px;
+}
+.text_tiempo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+    height: 25px;
+    gap: 40px;
+    padding: 0;
+}
+.heart:hover{
+    color: #d2201c;
+    cursor:pointer;
+}
+.link:hover{
+    color: #d2201c;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------ZONA FOOTER------------------------------------------------*/
+@media (max-width: 600px) {
+    .contenedor_footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      gap:20px;
+    }
+}
+.contenedor_footer{
+    font-family: 'Karla';
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    height: 150px;
+}
+.logo_footer{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.copyright{
+    padding: 0;
+    margin: 0;
+    grid-column: 1;
+    grid-row: 2;
+    color: lightgray;
+    font-style: italic;
+    height: 80px;
+    width: 300px;
+}
+.sign_up{
+    grid-column: 2;
+    grid-row: 1;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 17px;
+}
+.get_email{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 0;
+    margin: 0;
+    height: 80px;
+    width: 400px;
+}
+.contenedor_formulario{
+    grid-column: 3;
+    grid-row: 1/3;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.form_text{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    height: 50px;
+    width: 400px;
+    background-color: #f6f6f6;
+    position: absolute;
+    border-radius: 20px;
+    color: gray;
+}
+.button{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    height: 52px;
+    width: 150px;
+    margin-left:300px;
+    position: relative;
+    color: gray;
+    font-weight: bold;
+}
+.button:hover{
+    background-color: #d2201c;
+}
+.footer_link{
+    color: black;
+    text-decoration: none;
+    font-style: italic;
+}
+.footer_link:hover{
+    color: #d2201c;
+    text-decoration:none; 
+    cursor:pointer;
+}
+.social_media_container{
+    grid-column: 4;
+    grid-row: 1/3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    height: 100px;
+}
+.whatsapp:hover{
+    cursor:pointer;
+}
+.twitter:hover{
+    cursor:pointer;
+}
+.instagram:hover{
+    cursor:pointer;
+}
+.google:hover{
+    cursor:pointer;
+}
+.linkedin:hover{
+    cursor:pointer;
+}
+.pinterest:hover{
+    cursor:pointer;
+}
+.whatsapp:hover{
+    cursor:pointer;
+}

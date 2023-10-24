@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!--Empezamos el codigo vinculando nuestros css ademas de poniendole informacion al documento, como el titulo del mismo-->
+    <head>
+        <meta charset="utf-8">
+        <title>AC2_Pebona</title>
+        <!--Vinculación a mi CSS-->
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <!--Aqui hago uso de los svgs gratuito que ofrece la pagina web, web fonts, para ello tengo este js que me permite hacer uso de los iconos sin tener nada descargado-->
+        <script src="https://kit.fontawesome.com/be865c3e2c.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        
+        <!--Empiezo el codigo html con un header, con esto pretendo crear una cabecera de página con todos los elementos para navegar por el entorno de mi web, como se aprecia con el tag nav-->
+        <header class="contenedor_menu" >
+            <nav class="contenedor_menu">
+                <a href="index.html"><img src="img/logo_pebona.png" alt="logo" height="25" width="125" class="logo_header"></a>
+                <!--Lo siguiente que veremos son los tags div usados, como he hecho uso de ellos en toda mi practica explicaré el porque aquí, así me ahorraré explicarlo en todos los sitios donde ha sido usado.
+                El tag div ha sido usado a modo de contenedor. Basicamente cuando hago uso de un div es por que lo que hay dentro necesita ser modificado conjuntamente en el CSS y no requiero de un tag en especifico-->
+                <div class="movil">
+                    <div class="middle_buttons">
+
+                        <div>
+                            <a href="index.html" class="home_text">HOME</a>
+                            <i class="fas fa-chevron-down home_arrow"></i>
+                        </div>
+                        <div>
+                            <a href="index.html" class="shop_text">SHOP</a>
+                            <i class="fas fa-chevron-down shop_arrow"></i>
+                        </div>
+                        <a href="index.html" class="blog_text">BLOG</a>
+                        <div> 
+                            <a href="index.html" class="products_text">PRODUCTS</a>
+                            <i class="fas fa-chevron-down products_arrow"></i>
+                        </div>
+                        <a href="index.html" class="about_text">ABOUT US</a>
+                        <a href="index.html" class="contact_text">CONTACT US</a>
+                    </div>
+
+                    <div class = "left_layout">
+                        <a href="index.html" class="our_store">Search our store</a>
+
+                            <i class="fas fa-search fa-lg search"></i>
+                        <div class="iconos_header">
+                            <a href="index.html"><i class="fas fa-shopping-bag fa-lg shopping_bag"></i></a>
+                            <a href="index.html"><i class="fas fa-cog fa-lg gear"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--He decidido devidir mi trabajo en un article con diferentes sections. Algunas de estas sections tienen articles dentro-->
+        <article>
+            <!--Para esta primera parte he usado un article para mostrar el mosaico de imagenes principal junto con el texto que se debe mostrar-->
+            <section class="contenedor_inicial">
+                <!--Contenedor-->
+                <div class="texto_sale_men">
+                    <div class="texto_conjunto_offer">
+                        <p class="limited_edition">LIMITED EDITION</p>
+                        <P class="text_sale_offer">Sale Offer 20% Off This Week</P>
+                    </div>
+                    <p class="sport_sneaker">Sport Sneaker 2018</p>
+                    <p class="explore_now">EXPLORE NOW</p>
+                </div>
+
+                <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/slide-1_3e514a28-4061-4b2d-bb13-28682e3520e7.jpg?v=1538904304" alt="Sport Sneaker 2018" class="sale_men">
+                <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-11_cb5b2a35-f164-488e-a02d-c66267b4a16c.jpg?v=1538904380)" alt="20% of sale in men's clothing" class="sale">   
+                <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-12_d32131a9-3376-4559-9fe1-4e7f9dda7d0e.jpg?v=1538904394)" alt="Trending Sunglasses" class="trending_sunglasses">
+                <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-13_74db4690-c61e-46b1-9f90-4abebf720c94.jpg?v=1538904402)" alt="Sale off Sneaker" class="sale_off">
+                <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-14.jpg?v=1537617822)" alt="New Arrivals Shoes" class="new_arrivals">
+                <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-15.jpg?v=1537617829)" alt="Accesories" class="sale_accesories">
+                <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-16.jpg?v=1537617841)" alt="Handbag Collection 2018" class="handbag_collection">
+                <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-17.jpg?v=1537617851)" alt="30% of sale in Women's Clothing" class="sale_women">
+            </section>
+            <!--Esta sección ha sido usada a modo de contenedor para guardar el texto intermedio de la página-->
+            <section class="textos_intermedios">
+
+                <h1 class="texto_trending">New Trending Products</h1>
+                <img src="img/rojo.png" alt="linia roja" height="20" width="75" class="linia_roja">
+                <P class="texto_best_products">The best of our products at the best of its prices</P>
+
+            </section>
+            <!--Seccion de productos-->
+            <section class="contenedor_final">
+                <!--Aqui he decidido crear un article ya que opino que cada producto tiene un peso importante dentro de esta section, además, su estructura se puede subdividir en diferentes sections. 
+                    Esto pasa con cada articulo dentro de esta section-->
+                <article class = "contenedor_billetera">
+                    <!--<p class="descuento_billetera">5%</p>-->
+
+                    <div class="overlay"> 
+                        <i class="fas fa-shopping-bag fa-lg shopping_bag"></i>
+                        <i class="far fa-heart fa-lg heart"></i>
+                        <i class="fas fa-link fa-lg link"></i>
+                        <i class="fas fa-search fa-lg search"></i>
+                    </div>
+
+                    <section  class="billetera">        
+                        <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/product_13_664978c2-d878-43ca-99b1-c4c46170f0ac_large.jpg?v=1571714767" alt="Billetera de piel" class="img_billetera">
+                    </section>
+
+                    <section class="texto">
+                        <div class = texto_estrellas>
+                            <p>Krystie</p>
+                            <div class = estrellas>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>  
+                        <p class = "descripcion">Parezca New Razonable</p>
+                        <div class="precios">
+                            <p class = "p_normal">$526.00</p>
+                            <p class="p_rebajado">$500.00</p>
+                        </div>
+                    </section>
+                </article>
+
+
+                <article class="contenedor_nike">
+                    
+                    <div class="overlay"> 
+                        <i class="fas fa-shopping-bag fa-lg shopping_bag"></i>
+                        <i class="far fa-heart fa-lg heart"></i>
+                        <i class="fas fa-link fa-lg link"></i>
+                        <i class="fas fa-search fa-lg search"></i>
+                    </div>
+
+                    <section class="nike">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/product_5_f073bdbe-103c-4341-9348-cb7fbf62087c_large.jpg?v=1571714766" alt="Zapatillas Nike" class="img_nike">
+                    </section>
+
+
+                    <section class="texto">
+                        <div class = texto_estrellas>
+                            <p>Glus</p>
+                            <div class = estrellas>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>  
+                        <p class = "descripcion">Lorem Ipsum</p>
+                        <div class="precios">
+                            <p class = "p_normal">$555.00</p>
+                            <p class="p_rebajado">$500.00</p>
+                        </div>
+                    </section>
+                </article>
+
+                    
+                <article class="contenedor_mochila">
+
+                    <div class="overlay"> 
+                        <i class="fas fa-shopping-bag fa-lg shopping_bag"></i>
+                        <i class="far fa-heart fa-lg heart"></i>
+                        <i class="fas fa-link fa-lg link"></i>
+                        <i class="fas fa-search fa-lg search"></i>
+                    </div>
+
+                    <section class="mochila">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/product_6_e8c8fda6-8c7f-4adb-8f0a-e46272b3b714_large.jpg?v=1571714766" alt="Mochila C"  class="img_mochila">
+                    </section>
+
+                    <section class="texto">
+                        <div class = texto_estrellas>
+                            <p>Generic</p>
+                            <div class = estrellas>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>  
+                        <p class = "descripcion">Pensamiento Popular</p>
+                        <div class="precios">
+                            <p class = "p_normal">$366.00</p>
+                            <p class="p_rebajado">$258.00</p>
+                        </div>
+                    </section>
+                </article>
+
+
+                <article class="contenedor_gafas">
+
+                    <div class="overlay"> 
+                        <i class="fas fa-shopping-bag fa-lg shopping_bag"></i>
+                        <i class="far fa-heart fa-lg heart"></i>
+                        <i class="fas fa-link fa-lg link"></i>
+                        <i class="fas fa-search fa-lg search"></i>
+                    </div>
+
+                    <section class="gafas">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/product_10_37630cd1-1590-4d25-982b-e513c20c72d0_large.jpg?v=1571714766" alt="Gafas aviador" class="img_gafas">
+                    </section>
+
+                    <section class="texto">
+                        <div class = texto_estrellas>
+                            <p>Imara</p>
+                            <div class = estrellas>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>  
+                        <p class = "descripcion">Predefinidos Cuando</p>
+                        <div class="precios">
+                            <p class = "p_normal">$190.00</p>
+                            <p class="p_rebajado">$180.00</p>
+                        </div>
+                    </section>
+                </article>
+                       
+                    
+                <article class="contenedor_calcetin">
+
+                    <div class="overlay_especial"> 
+                        <i class="fas fa-shopping-bag fa-lg shopping_bag"></i>
+                        <i class="far fa-heart fa-lg heart"></i>
+                        <i class="fas fa-link fa-lg link"></i>
+                        <i class="fas fa-search fa-lg search"></i>
+                    </div>
+
+                    <section class="calcetin">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/Product-15_large.png?v=1571714767" alt="Calcetín navideño" class="img_calcetin">
+                    </section>
+
+                    <section class="texto">
+                        <div class = texto_estrellas>
+                            <p>Krystie</p>
+                            <div class = estrellas>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>  
+                        <p class = "descripcion">Parezca New Razonable Christmas</p>
+                        <div class="precios">
+                            <p class = "p_normal">$526.00</p>
+                            <p class="p_rebajado">$500.00</p>
+                        </div>
+                    </section>
+                </article>
+
+                    
+                <article class="contenedor_decoraciones">
+                    <section class="tiempo"> 
+                        <div class="numbers">
+                            <p>128</p>
+                            <p>13</p>
+                            <p>31</p>
+                            <p>30</p>
+                        </div>
+                        <div class="text_tiempo">
+                            <p>Days</p>
+                            <p>Hour</p>
+                            <p>Min</p>
+                            <p>Sec</p>
+                        </div>
+                    </section>
+
+                    <section class="overlay_especial"> 
+                        <i class="fas fa-shopping-bag fa-lg shopping_bag"></i>
+                        <i class="far fa-heart fa-lg heart"></i>
+                        <i class="fas fa-link fa-lg link"></i>
+                        <i class="fas fa-search fa-lg search"></i>
+                    </section>
+
+                    <section class="decoraciones">
+                        <img src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/Produc-7_93aee2bd-341d-44e4-98b8-c75db67f2fc5_large.png?v=1571714767" alt="Decoraciones navidad" class="img_decoraciones">    
+                    </section>
+
+                    <section class="texto">
+                        <div class = texto_estrellas>
+                            <p>Glus</p>
+                            <div class = estrellas>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>  
+                        <p class = "descripcion">Quedando Esencialmente</p>
+                        <div class="precios">
+                            <p class = "p_normal">$559.00</p>
+                            <p class="p_rebajado">$526.00</p>
+                        </div>
+                    </section>
+                </article>
+            </section>
+        </article>
+
+        <!--Por último tenemos el footer, donde encontraremos nuestras redes sociales, un pequeño formulario donde debemos introducir nuestro email y algunos links-->
+
+        <footer class="contenedor_footer">
+            <div class="logo_footer">
+                <a href="index.html" ><img src="img/logo_pebona.png" alt="logo" height="25" width="125" ></a>
+            </div>
+            <p class="copyright">Copyright © 2018 <a href="index.html" class="footer_link">Pebona</a> Themes. All Right Reserved</p>
+
+            <p class="sign_up">Sign Up For Our Newsletter</p>
+
+            <p class="get_email">Get E-mail updates about our latest shop and special offers.</p>
+
+                <div class="contenedor_formulario">
+                    <form class="formulario">
+                        <input type="text" value="   Your Email Address" class = "form_text">
+                        <button class="button">SIGN UP</button>
+                    </form>
+                </div>
+
+            <div class="social_media_container">
+                <img src="https://www.canaljesustv.com/wp-content/uploads/2016/06/twitter-round-logo-png-transparent-background-7.png" alt="logo twitter" height="50" width="50" class="twitter">
+                <img src="https://www.cristonautas.com/wp-content/uploads/2020/04/instagram-logo-circle.png" alt="logo instagram" height="50" width="50" class="instagram">
+                <img src="https://i.pinimg.com/originals/8c/03/0b/8c030bd6bd7ee87ad41485e3c7598dd4.png" alt="logo google" height="50" width="50" class="google">
+                <img src="https://cdn.icon-icons.com/icons2/1906/PNG/512/iconfinder-linkedin-4550875_121338.png" alt="logo linkedin" height="50" width="50" class="linkedin">
+                <img src="https://cdn.worldvectorlogo.com/logos/pinterest-1.svg" alt="logo pinterest" height="50" width="50" class="pinterest">
+                <img src="https://cdn2.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-whatsapp-circle-512.png" alt="logo whatsapp" height="50" width="50" class="whatsapp">
+            </div>
+        </footer>
+    </body>
+
+</html>
